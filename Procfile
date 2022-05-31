@@ -1,1 +1,1 @@
-web: java -war target/AdminAPI.war
+web: java $JAVA_OPTS -jar target/dependency/standard-1.0.6.jar --port $PORT target/*.war
