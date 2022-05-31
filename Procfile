@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.activate.endpoint
+web: java -war target/Admin API.war
