@@ -61,13 +61,6 @@
                 <version>9.4.12.v20180830</version>
             </plugin>
 
-            <!-- Default is too old, update to latest to run the latest Spring 5 + jUnit 5 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.0</version>
-            </plugin>
-
             <!-- Default 2.2 is too old, update to latest -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
