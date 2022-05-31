@@ -1,1 +1,1 @@
-web: java -jar target/Admin API.war
+web: java -jar target/AdminAPI.war
