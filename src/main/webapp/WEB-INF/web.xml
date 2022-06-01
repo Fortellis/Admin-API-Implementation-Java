@@ -31,16 +31,16 @@
     <servlet-name>GetConnectionRequests</servlet-name>
   </servlet-mapping>
   <servlet>
-        <servlet-name>
-        DeleteRequest
-        </servlet-name>  
-        <servlet-class>
-        DeleteRequest    
-        </servlet-class>
-        <load-on-startup/>
-    </servlet>
-    <servlet-mapping>
-        <url-pattern>/deleteRequest</url-pattern>
-        <servlet-name>DeleteRequest</servlet-name>
-    </servlet-mapping>
+    <servlet-name>
+    DeleteRequest
+    </servlet-name>  
+    <servlet-class>
+    DeleteRequest    
+    </servlet-class>
+    <load-on-startup/>
+  </servlet>
+  <servlet-mapping>
+    <url-pattern>/deleteRequest</url-pattern>
+    <servlet-name>DeleteRequest</servlet-name>
+  </servlet-mapping>
 </web-app>

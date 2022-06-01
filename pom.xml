@@ -59,7 +59,7 @@
     
   </dependencies>
   <build>
-        <finalName>Admin API</finalName>
+        <finalName>AdminAPI</finalName>
         <plugins>
             <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
             <plugin>
