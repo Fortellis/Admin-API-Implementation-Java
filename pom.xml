@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.activate.endpoint</groupId>
-  <artifactId>AdminAPI</artifactId>
+  <groupId>com.example</groupId>
+  <artifactId>helloworld</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>AdminAPI Maven Webapp</name>
@@ -55,8 +55,12 @@
         <artifactId>okta-jwt-verifier-impl</artifactId>
         <version>0.5.1</version>
         <scope>runtime</scope>
-    </dependency>
-    
+      </dependency>
+      <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-servlet</artifactId>
+          <version>7.6.0.v20120127</version>
+      </dependency>
   </dependencies>
   <build>
         <finalName>AdminAPI</finalName>
@@ -78,7 +82,7 @@
                         <id>copy-dependencies</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>copy</goal>
+                            <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
                             <artifactItems>
