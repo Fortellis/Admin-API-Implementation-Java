@@ -56,12 +56,17 @@
         <version>0.5.1</version>
         <scope>runtime</scope>
     </dependency>
-
     
   </dependencies>
   <build>
         <finalName>AdminAPI</finalName>
         <plugins>
+            <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html: This is the build that makes jetty work locally. -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.12.v20180830</version>
+            </plugin>
 
             <!-- Default 2.2 is too old, update to latest -->
             <plugin>
