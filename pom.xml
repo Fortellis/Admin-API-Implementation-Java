@@ -61,7 +61,7 @@
   <build>
         <finalName>AdminAPI</finalName>
         <plugins>
-            <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+            <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html: This is the build that makes jetty work locally.  -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
