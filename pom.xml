@@ -56,16 +56,17 @@
         <version>0.5.1</version>
         <scope>runtime</scope>
     </dependency>
-    <dependency>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.4.12.v20180830</version>
-    </dependency>
     
   </dependencies>
   <build>
         <finalName>AdminAPI</finalName>
         <plugins>
+            <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.12.v20180830</version>
+            </plugin>
 
             <!-- Default 2.2 is too old, update to latest -->
             <plugin>
@@ -95,12 +96,9 @@
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.4</version>
+                <version>3.0.3</version>
                 <configuration>
                     <appName>AdminAPI</appName>
-                    <processTypes>
-                        <web>mvn jetty:run</web>
-                    </processTypes>
                     <buildpacks>
                         <buildpack>heroku/jvm</buildpack>
                     </buildpacks>
