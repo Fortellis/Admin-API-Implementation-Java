@@ -29,10 +29,11 @@ public class GetConnectionRequests extends HttpServlet{
         super();
     }
 
-     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        File  wholeFile =new File ("src\\main\\resources\\connectionRequests.json");
-        FileInputStream fis = new FileInputStream(wholeFile);
-        DataInputStream in = new DataInputStream(fis);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        InputStream is = classloader.getResourceAsStream("connectionRequests.json");
+
+        DataInputStream in = new DataInputStream(is);
         BufferedReader br = new BufferedReader(new InputStreamReader(in));
         String concatenatedFile = "";
         String strLine;
