@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.heroku</groupId>
   <artifactId>AdminAPI</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>AdminAPI Maven Webapp</name>
   <url>http://maven.apache.org</url>
