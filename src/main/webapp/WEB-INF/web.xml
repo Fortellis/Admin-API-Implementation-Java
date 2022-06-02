@@ -11,7 +11,7 @@
     <servlet-class>
     Activate    
     </servlet-class>
-    <load-on-startup/>
+
   </servlet>
   <servlet-mapping>
     <url-pattern>/activate</url-pattern>
@@ -24,7 +24,7 @@
     <servlet-class>
     GetConnectionRequests    
     </servlet-class>
-    <load-on-startup/>
+
   </servlet>
   <servlet-mapping>
     <url-pattern>/getConnectionRequests</url-pattern>
@@ -37,7 +37,7 @@
     <servlet-class>
     DeleteRequest    
     </servlet-class>
-    <load-on-startup/>
+
   </servlet>
   <servlet-mapping>
     <url-pattern>/deleteRequest</url-pattern>
