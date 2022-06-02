@@ -158,68 +158,30 @@
             "phoneNumber": "(614) 555-5555",
             "countryCode": "US",
             "name": "Super Car Dealership",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
+            "id": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8"
         },
         "appInfo": {
             "contactEmail": "contact@example.com",
             "appOrgId": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8",
             "name": "Awesome Application",
             "developer": "Awesome App Developer",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
+            "id": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8"
         },
         "entityInfo": {
             "address": "1234 Some St. Columbus, OH 43235",
             "phoneNumber": "(614) 555-5555",
             "countryCode": "US",
             "name": "Super Car Dealership",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
+            "id": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8"
         },
-        "connectionId": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81",
-        "subscriptionId": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81",
+        "connectionId": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8",
+        "subscriptionId": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8",
         "solutionInfo": {
-            "contactEmail": "contact@example.com",
-            "appOrgId": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81",
-            "name": "Awesome Application",
-            "developer": "Awesome App Developer",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
-        },
-        "apiInfo": {
-            "implementationName": "Fortellis Spec 8",
-            "name": "Appointments",
-            "id": "v1-appointments"
-        }
-    },
-    {
-        "userInfo": {"fortellisId": "user@example.com"},
-        "organizationInfo": {
-            "address": "1234 Some St. Columbus, OH 43235",
-            "phoneNumber": "(614) 555-5555",
-            "countryCode": "US",
-            "name": "Super Car Dealership",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
-        },
-        "appInfo": {
             "contactEmail": "contact@example.com",
             "appOrgId": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8",
             "name": "Awesome Application",
             "developer": "Awesome App Developer",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
-        },
-        "entityInfo": {
-            "address": "1234 Some St. Columbus, OH 43235",
-            "phoneNumber": "(614) 555-5555",
-            "countryCode": "US",
-            "name": "Super Car Dealership",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
-        },
-        "connectionId": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81",
-        "subscriptionId": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81",
-        "solutionInfo": {
-            "contactEmail": "contact@example.com",
-            "appOrgId": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81",
-            "name": "Awesome Application",
-            "developer": "Awesome App Developer",
-            "id": "e2f92cb5-1e1b-4cc9-8fb2-bac51aa1dd81"
+            "id": "867290d3-1905-4dce-a52d-9c8b8f1bd1b8"
         },
         "apiInfo": {
             "implementationName": "Fortellis Spec 8",

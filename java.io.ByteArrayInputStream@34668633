@@ -226,5 +226,43 @@
             "name": "Appointments",
             "id": "v1-appointments"
         }
+    },
+    {
+        "userInfo": {"fortellisId": "user@example.com"},
+        "organizationInfo": {
+            "address": "1234 Some St. Columbus, OH 43235",
+            "phoneNumber": "(614) 555-5555",
+            "countryCode": "US",
+            "name": "Super Car Dealership",
+            "id": "fd46887b-11c4-4190-9748-917903ddc3da"
+        },
+        "appInfo": {
+            "contactEmail": "contact@example.com",
+            "appOrgId": "fd46887b-11c4-4190-9748-917903ddc3da",
+            "name": "Awesome Application",
+            "developer": "Awesome App Developer",
+            "id": "fd46887b-11c4-4190-9748-917903ddc3da"
+        },
+        "entityInfo": {
+            "address": "1234 Some St. Columbus, OH 43235",
+            "phoneNumber": "(614) 555-5555",
+            "countryCode": "US",
+            "name": "Super Car Dealership",
+            "id": "fd46887b-11c4-4190-9748-917903ddc3da"
+        },
+        "connectionId": "fd46887b-11c4-4190-9748-917903ddc3da",
+        "subscriptionId": "fd46887b-11c4-4190-9748-917903ddc3da",
+        "solutionInfo": {
+            "contactEmail": "contact@example.com",
+            "appOrgId": "fd46887b-11c4-4190-9748-917903ddc3da",
+            "name": "Awesome Application",
+            "developer": "Awesome App Developer",
+            "id": "fd46887b-11c4-4190-9748-917903ddc3da"
+        },
+        "apiInfo": {
+            "implementationName": "Fortellis Spec 8",
+            "name": "Appointments",
+            "id": "v1-appointments"
+        }
     }
 ]}

@@ -23,15 +23,18 @@ import java.nio.file.Paths;
 
 
 import com.google.gson.Gson;
-
+import java.io.InputStream;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
+
 import java.nio.charset.StandardCharsets;
 
 import org.json.*;
 
 import com.okta.jwt.*;
 import java.time.Duration;
+
+import java.util.*;
 
 @WebServlet("/activate")
 public class Activate extends HttpServlet{
@@ -76,8 +79,10 @@ public class Activate extends HttpServlet{
     }
     public void newConnectionRequest(String connectionRequest) {
 
-        try{            
-            File  wholeFile =new File ("src\\main\\resources\\connectionRequests.json");
+        try{
+            ClassLoader classLoader = getClass().getClassLoader();
+            File  wholeFile =new File (classLoader.getResource("connectionRequests.json").getFile());
+            InputStream inputStream = new FileInputStream(wholeFile);
             FileInputStream fis = new FileInputStream(wholeFile);
             DataInputStream in = new DataInputStream(fis);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
