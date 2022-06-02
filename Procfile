@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* com.example.heroku.Main
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/AdminAPI.war
