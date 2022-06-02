@@ -30,7 +30,7 @@ public class GetConnectionRequests extends HttpServlet{
     }
 
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        File  wholeFile =new File ("src\\main\\resources\\connectionRequests.json");
+        File  wholeFile =new File ("/connectionRequests.json");
         FileInputStream fis = new FileInputStream(wholeFile);
         DataInputStream in = new DataInputStream(fis);
         BufferedReader br = new BufferedReader(new InputStreamReader(in));
