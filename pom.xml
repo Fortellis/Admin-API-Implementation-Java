@@ -120,16 +120,6 @@
                 </configuration>
             </plugin>
         </plugins>
-            <resource>
-    <directory><div class="src"/>
-    <main/>
-    <resources/>connectionRequests.json</directory> 
-        <targetPath>./</targetPath>
-    </resource> 
-    <resource> 
-    <!-- mkdir -->
-    <directory>./filestorage</directory>
-    <targetPath>../filestorage</targetPath>
-    </resource>
+        
     </build>
 </project>
