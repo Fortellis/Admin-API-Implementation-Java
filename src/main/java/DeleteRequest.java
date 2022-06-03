@@ -38,9 +38,12 @@ public class DeleteRequest extends HttpServlet{
         JSONObject requestToDelete = new JSONObject(buffer.toString());
         System.out.println("This is the JSON Object for the data: " + requestToDelete);
         
-        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        InputStream is = classloader.getResourceAsStream("connectionRequests.json");
-        DataInputStream in = new DataInputStream(is);
+        ClassLoader classLoader = getClass().getClassLoader();
+        File  wholeFile =new File (classLoader.getResource("connectionRequests.json").getFile());
+        InputStream inputStream = new FileInputStream(wholeFile);
+        FileInputStream fis = new FileInputStream(wholeFile);
+        
+        DataInputStream in = new DataInputStream(fis);
         BufferedReader br = new BufferedReader(new InputStreamReader(in));
         String concatenatedFile = "";
         String strLine;
@@ -74,7 +77,7 @@ public class DeleteRequest extends HttpServlet{
         parsedConnectionRequests.remove(index);
         System.out.println("This is the new object that we are sending to the file: " + objectForConcatenatedFile);
 
-        Path path = Paths.get(classloader.toString());
+        Path path = Paths.get(wholeFile.toString());
         String str = objectForConcatenatedFile.toString(4);
         byte[] arr = str.getBytes();
         try{
