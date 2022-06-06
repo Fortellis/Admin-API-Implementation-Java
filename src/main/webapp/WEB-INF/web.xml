@@ -40,7 +40,27 @@
 
   </servlet>
   <servlet-mapping>
-    <url-pattern>/deleteRequest</url-pattern>
-    <servlet-name>DeleteRequest</servlet-name>
+    <url-pattern>/deactivate/*</url-pattern>
+    <servlet-name>Deactivate</servlet-name>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>
+    Deactivate
+    </servlet-name>  
+    <servlet-class>
+    Deactivate    
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <url-pattern>/getDeactivationRequests</url-pattern>
+    <servlet-name>GetDeactivationRequests</servlet-name>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>
+    GetDeactivationRequests
+    </servlet-name>  
+    <servlet-class>
+    GetDeactivationRequests    
+    </servlet-class>
+  </servlet>
 </web-app>

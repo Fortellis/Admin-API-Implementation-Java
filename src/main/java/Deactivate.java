@@ -36,10 +36,10 @@ import java.time.Duration;
 
 import java.util.*;
 
-@WebServlet("/activate")
-public class Activate extends HttpServlet{
+@WebServlet("/deactivate/*")
+public class Deactivate extends HttpServlet{
 
-    public Activate(){
+    public Deactivate(){
         super();
     }
 
@@ -54,33 +54,32 @@ public class Activate extends HttpServlet{
                 .setAudience("api_providers")                
                 .setConnectionTimeout(Duration.ofSeconds(1)) 
                 .build();
+                 
             Jwt jwt = jwtVerifier.decode(authorizationHeader.replace("Bearer", ""));
             System.out.println("This is the authentication decoded: " + jwt);
-            PrintWriter out = response.getWriter();
-            StringBuilder buffer = new StringBuilder();
-            BufferedReader reader = request.getReader();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                buffer.append(line);
-            }
-            String connectionRequest = buffer.toString();
-            System.out.println("This is your connection request: " + connectionRequest);
-            newConnectionRequest(connectionRequest);
-            PrintWriter activationResponse = response.getWriter();
+
+            //This is your deactivation request from the path parameter.  
+            String UUID = request.getPathInfo().toString();
+            System.out.println("This is the UUID: " + UUID);
+
+            String deactivateRequest = "{\"connectionId\": \"" + UUID + "\"}";
+            System.out.println("This is your deactivation request: " + deactivateRequest);
+            newDeactivateRequest(deactivateRequest);
+            PrintWriter deactivationResponse = response.getWriter();
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
-            activationResponse.print("{\"links\": [{\"href\": \"localhost:3000\", \"rel\": \"self\", \"method\": \"post\", \"title\": \"Activation Request\"}]}");
-            activationResponse.flush();
+            deactivationResponse.print("{\"links\": [{\"href\": \"localhost:3000\", \"rel\": \"self\", \"method\": \"post\", \"title\": \"Deactivation Request\"}]}");
+            deactivationResponse.flush();
         }catch(Exception e){
             System.out.println("You had a problem with the token.");
         }
 
     }
-    public void newConnectionRequest(String connectionRequest) {
+    public void newDeactivateRequest(String deactivateRequest) {
 
         try{
             ClassLoader classLoader = getClass().getClassLoader();
-            File  wholeFile =new File (classLoader.getResource("connectionRequests.json").getFile());
+            File  wholeFile =new File (classLoader.getResource("deactivationRequests.json").getFile());
             InputStream inputStream = new FileInputStream(wholeFile);
             FileInputStream fis = new FileInputStream(wholeFile);
             DataInputStream in = new DataInputStream(fis);
@@ -96,12 +95,12 @@ public class Activate extends HttpServlet{
             //Make the concatenated lines a JSON object again. 
             JSONObject objectForConcatenatedFile = new JSONObject(concatenatedFile);
             //Change the connectionRequests from the file into just an array. 
-            JSONArray parsedConnectionRequests = objectForConcatenatedFile.getJSONArray("connectionRequests");
-            System.out.println("This is just the array of the connectionRequests: "+ parsedConnectionRequests);
+            JSONArray parsedDeactivationRequests = objectForConcatenatedFile.getJSONArray("deactivationRequests");
+            System.out.println("This is just the array of the deactivationRequests: "+ parsedDeactivationRequests);
             //Change the connectionRequest into an object
-            JSONObject addObject = new JSONObject(connectionRequest);
+            JSONObject addObject = new JSONObject(deactivateRequest);
             //Put the connection request object into the array.
-            parsedConnectionRequests.put(addObject);
+            parsedDeactivationRequests.put(addObject);
             System.out.println("This is the object for the concatenated file: "+ objectForConcatenatedFile.toString(4));
 
             Path path = Paths.get(wholeFile.toString());
